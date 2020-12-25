@@ -7,9 +7,12 @@ import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
-
 import LockOutlinedIcon from '@material-ui/icons/Lock';
 
+import firebase from 'firebase/app';
+import "firebase/auth";
+
+// eslint-disable-next-line
 import RawLogin from './RawLogin';
 import Copyright from './Copyright';
 
@@ -19,6 +22,8 @@ import useStyles from './styles';
 
 export default function Login() {
   const classes = useStyles();
+
+  console.log(firebase)
 
   return (
     <Grid container component="main" className={classes.root}>
@@ -37,7 +42,7 @@ export default function Login() {
           </Typography>
           
           {/* INSERT LOGIN HERE */}
-          <RawLogin classes={classes} />
+          {/* <RawLogin classes={classes} /> */}
           <Box mt={5}>
             <Copyright />
           </Box>

@@ -19,13 +19,13 @@ import RawLogin from './RawLogin';
 import Copyright from './Copyright';
 
 import useStyles from './styles';
-import uiConfig from './uiConfig';
+import authConfig from './authConfig';
 
 
 
 export default function Login(props) {
   const classes = useStyles();
-  props.ui.start('#firebaseui-auth-container', uiConfig);
+  props.ui.start('#firebaseui-auth-container', authConfig);
 
   return (
     <Grid container component="main" className={classes.root}>

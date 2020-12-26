@@ -15,8 +15,7 @@ const uiConfig = {
           console.log('setting cookie');
 
           idToken = id;
-          // return axios.post('/cookie', { idToken });
-          return 0;
+          return axios.post('/cookie', { idToken });
         })
         .then((cookie) => {
           const newUser = userInfo.isNewUser;
@@ -33,7 +32,7 @@ const uiConfig = {
           }
         })
         .then(() => {
-          // location.href = '/routes/redirect';
+          window.location.href = '/';
           console.log('routed');
         })
         .catch(function (error) {
